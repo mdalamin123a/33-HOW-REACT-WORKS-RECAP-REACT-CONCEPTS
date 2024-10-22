@@ -4,22 +4,28 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <Nayok></Nayok>
+      <Nayok></Nayok>
+      <Nayok></Nayok>
+      <Nayok></Nayok>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>hello World</h1>
       </header>
     </div>
   );
+}
+
+function Nayok(){
+
+  const nayokStyle = {
+    border: '2px solid purple',
+    margin: '10px',
+  } 
+  return <div style={nayokStyle}>
+    <h1>Ami Khol Nayok</h1>
+    <p>I have done 5 movies</p>
+  </div>
 }
 
 export default App;
