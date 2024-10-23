@@ -1,13 +1,1 @@
-1. Pass data to one component to another component by using props when Calling/Using this component
-    function Nayok(props){
-
-        const nayokStyle = {
-            border: '2px solid purple',
-            margin: '10px',
-        } 
-        return <div style={nayokStyle}>
-            <h1>Ami Khol Nayok-{props.name}</h1>
-            <p>I have done 5 movies in {props.age} years</p>
-        </div>
-    }
-2. Pass data to one component to another component by using Custom Attribute (like html tags) => <Nayok name="Shakib" age="56"></Nayok>
+1. component state menagement. useState(), destructure useState() retuened array;
