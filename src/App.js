@@ -20,14 +20,29 @@ function App() {
 }
 
 function MovieCounter(){
-  const [count, setCount] = useState(0);
+  let [count, setCount] = useState(0);
+
+  const handleclick = () => setCount(count + 1);
+
   return (
     <div>
-      <button style={{marginTop: '10px'}} className="counter-button">Add Movie</button>
+      <button style={{marginTop: '10px'}} className="counter-button" onClick={handleclick}>Add Movie</button>
       <h5>Number of Movies: {count}</h5>
+      <MovieDisplay movies={count}></MovieDisplay>
+      <MovieDisplay movies={count + 10}></MovieDisplay>
+      <MovieDisplay movies={count + 5}></MovieDisplay>
+      <MovieDisplay movies={count}></MovieDisplay>
     </div>
   );
 }
+
+function MovieDisplay(props){
+  return (
+    <div>
+      <h4>Movies I have acted: {props.movies} </h4>
+    </div>
+  );
+} 
 
 function Nayok(props){
 

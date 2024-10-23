@@ -1,1 +1,33 @@
-1. component state menagement. useState(), destructure useState() retuened array;
+1. Change State by using setState() method. useState update all the element where i used state variable
+//state var, setState 
+let [count, setCount] = useState(0);
+
+2. Add Event Handler on JSX/React Element By using onClick Attribute. 
+const handleclick = () => setCount(count + 1);
+<button style={{marginTop: '10px'}} className="counter-button" onClick={handleclick}>Add Movie</button>
+4. Pass State from Parent Element to Child Element.
+// parent
+function MovieCounter(){
+    let [count, setCount] = useState(0);
+  
+    const handleclick = () => setCount(count + 1);
+  
+    return (
+      <div>
+        <button style={{marginTop: '10px'}} className="counter-button" onClick={handleclick}>Add Movie</button>
+        <h5>Number of Movies: {count}</h5>
+        <MovieDisplay movies={count}></MovieDisplay>
+        <MovieDisplay movies={count + 10}></MovieDisplay>
+        <MovieDisplay movies={count + 5}></MovieDisplay>
+        <MovieDisplay movies={count}></MovieDisplay>
+      </div>
+    );
+  }
+// child
+function MovieDisplay(props){
+    return (
+      <div>
+        <h4>Movies I have acted: {props.movies} </h4>
+      </div>
+    );
+  }
